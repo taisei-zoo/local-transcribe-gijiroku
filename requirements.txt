@@ -1,0 +1,7 @@
+faster-whisper
+openai
+httpx
+python-docx
+openpyxl
+pypdf
+pykakasi

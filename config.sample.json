@@ -1,0 +1,57 @@
+{
+  "whisper": {
+    "model_size": "medium",
+    "device": "auto",
+    "compute_type": "auto",
+    "language": "ja",
+    "beam_size": 5
+  },
+  "lmstudio": {
+    "base_url": "http://localhost:1234/v1",
+    "api_key": "lm-studio",
+    "timeout_sec": 3600,
+    "temperature": 0.2,
+    "model_label": "gpt-oss-20b",
+    "model_id": "openai/gpt-oss-20b",
+    "model_catalog": {
+      "gpt-oss-20b": "openai/gpt-oss-20b",
+      "gemma-4-e4b": "google/gemma-4-e4b",
+      "gemma-4-12b": "google/gemma-4-12b",
+      "gemma-3-12b": "google/gemma-3-12b"
+    },
+    "max_tokens_default": 90000,
+    "max_tokens_map": {
+      "要点要約（長）": 90000,
+      "議事録": 90000,
+      "汎用要約（自由指示）": 90000,
+      "誤認識補正（全文）": 90000,
+      "要約（短）": 800,
+      "要約（中）": 1800,
+      "決定事項/ToDo": 2500
+    },
+    "context_tokens": 262144,
+    "input_max_estimated_tokens": 150000,
+    "prompt_buffer_tokens": 22000,
+    "too_long_behavior": "send_anyway"
+  },
+  "document_extract": {
+    "word_extract_tables_as_markdown": true,
+    "excel_max_sheets_per_book": 30,
+    "excel_max_rows_per_sheet": 5000,
+    "excel_max_cols_per_sheet": 80,
+    "excel_max_cells_per_sheet": 80000,
+    "excel_max_total_cells_per_book": 200000,
+    "excel_max_cell_chars": 2000,
+    "excel_include_hidden_sheets": false,
+    "pdf_min_extracted_chars": 100
+  },
+  "output": {
+    "write_plain_text": true,
+    "write_timestamped_text": true,
+    "write_extracted_text": true,
+    "write_combined_input_text": false,
+    "write_used_prompt": false,
+    "write_segments_csv": false,
+    "write_process_result_json": false
+  }
+}
